@@ -32,7 +32,7 @@ pwd
 
 
 echo "at /src/webapp"
-ls /opt/app-root/webapp
+ls /opt/app-root/src/webapp
 
 
 #echo "---> Building application from source..."
