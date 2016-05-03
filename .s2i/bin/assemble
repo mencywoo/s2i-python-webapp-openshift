@@ -23,9 +23,9 @@ fi
 
 echo "---> Installing application source..."
 cp -Rf /tmp/src/. ./
-cp -Rf ./.s2i/bin /usr/local/s2i
+#cp -Rf ./.s2i/bin /usr/local/s2i
 
-chmod +x /usr/local/s2i/*
+#chmod +x /usr/local/s2i/*
 
 echo "pwd"
 pwd
