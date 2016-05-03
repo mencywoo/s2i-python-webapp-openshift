@@ -16,7 +16,7 @@ LABEL io.k8s.description="Platform for building python webapp" \
 
 
 # TODO: Install required packages here:
-RUN yum install -y ... && yum clean all -y
+RUN yum install -y  && yum clean all -y
 
 RUN chown -R 1001: /opt/app-root
 
