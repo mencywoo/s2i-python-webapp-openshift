@@ -27,14 +27,6 @@ cp -Rf /tmp/src/. ./
 
 #chmod +x /usr/local/s2i/*
 
-echo "pwd"
-pwd
-
-
-echo "at /src/webapp"
-ls /opt/app-root/src/webapp
-
-
 #echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install
 
