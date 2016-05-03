@@ -23,7 +23,7 @@ fi
 
 
 echo "---> Installing application specific dependencies "
-pip install -qr /tmp/src/webapp/requirements.txt
+sudo pip install -qr /tmp/src/webapp/requirements.txt
 
 echo "---> Installing application source..."
 cp -Rf /tmp/src/. ./
