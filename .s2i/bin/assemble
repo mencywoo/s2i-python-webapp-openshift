@@ -31,15 +31,12 @@ cp -Rf ./.s2i/bin /usr/local/s2i
 
 chmod +x /usr/local/s2i/*
 
-#echo "at /tmp/src/src/webapp/"
-#ls /tmp/src/src/webapp/
-
 echo "pwd"
 pwd
 
 
 echo "at /src/webapp"
-ls /src/webapp
+ls /opt/app-root/webapp
 
 
 #echo "---> Building application from source..."

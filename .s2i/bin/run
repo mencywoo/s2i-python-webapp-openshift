@@ -12,4 +12,4 @@ echo "current path"
 pwd
 echo "ls"
 ls
-exec python /src/webapp/app.py
+exec python /opt/app-root/webapp/app.py
