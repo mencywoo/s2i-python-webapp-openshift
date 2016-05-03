@@ -1,0 +1,15 @@
+#!/bin/bash -e
+#
+# S2I run script for the 's2i-draft' image.
+# The run script executes the server that runs your application.
+#
+# For more information see the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+#
+
+# #exec <start your server here>
+echo "current path"
+pwd
+echo "ls"
+ls
+exec python /src/webapp/app.py

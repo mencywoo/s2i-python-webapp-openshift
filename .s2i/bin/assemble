@@ -1,0 +1,50 @@
+#!/bin/bash -e
+#
+# S2I assemble script for the 's2i-python-webapp' image.
+# The 'assemble' script builds your application source so that it is ready to run.
+#
+# For more information refer to the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+
+
+
+#if [[ "$1" == "-h" ]]; then
+	# If the 's2i-python-webapp' assemble script is executed with '-h' flag,
+	# print the usage.
+#	exec /usr/local/bin/s2i usage
+#fi
+
+# Restore artifacts from the previous build (if they exist).
+#
+if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
+  echo "---> Restoring build artifacts..."
+   cp -Rf /tmp/artifacts/. ./
+fi
+
+
+echo "---> Installing application specific dependencies "
+pip install -qr /tmp/src/src/webapp/requirements.txt
+
+echo "---> Installing application source..."
+cp -Rf /tmp/src/. ./
+cp -Rf ./.s2i/bin /usr/local/s2i
+
+chmod +x /usr/local/s2i/*
+
+#echo "at /tmp/src/src/webapp/"
+#ls /tmp/src/src/webapp/
+
+echo "pwd"
+pwd
+
+
+echo "at /src/webapp"
+ls /src/webapp
+
+
+#echo "---> Building application from source..."
+# TODO: Add build steps for your application, eg npm install, bundle install
+
+# build application artifacts
+#pushd ${HOME}
+#make
