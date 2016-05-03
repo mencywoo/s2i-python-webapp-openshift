@@ -16,9 +16,10 @@ LABEL io.k8s.description="Platform for building python webapp" \
 
 
 # TODO: Install required packages here:
-RUN yum install -y  && yum clean all -y
+RUN yum update -y
+RUN yum install -y python-pip &&  yum clean all -y
 
-RUN chown -R 1001: /opt/app-root
+RUN chown -R 1001:1001 /opt/app-root
 
 # TODO: Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7 image sets io.openshift.s2i.scripts-url label that way, or update that label
 COPY ./.s2i/bin/ /usr/libexec/s2i
