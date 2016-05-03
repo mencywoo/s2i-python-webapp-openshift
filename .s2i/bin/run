@@ -8,8 +8,9 @@
 #
 
 # #exec <start your server here>
-echo "current path"
+echo "current path 1 "
 pwd
-echo "ls"
-ls
-exec python /opt/app-root/webapp/app.py
+cd /opt/app-root/src/webapp
+echo "current path 2 "
+pwd
+exec python ./app.py
