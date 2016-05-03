@@ -21,10 +21,6 @@ if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
    cp -Rf /tmp/artifacts/. ./
 fi
 
-
-echo "---> Installing application specific dependencies "
-sudo pip install -qr /tmp/src/webapp/requirements.txt
-
 echo "---> Installing application source..."
 cp -Rf /tmp/src/. ./
 cp -Rf ./.s2i/bin /usr/local/s2i

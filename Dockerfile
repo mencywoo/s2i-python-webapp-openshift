@@ -17,7 +17,11 @@ LABEL io.k8s.description="Platform for building python webapp" \
 
 # TODO: Install required packages here:
 RUN yum update -y
-RUN yum install -y python-pip &&  yum clean all -y
+RUN yum install -y python-pip sudo &&  yum clean all -y
+
+ADD ./webapp/requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
 
 RUN chown -R 1001:1001 /opt/app-root
 
