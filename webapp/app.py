@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     provider = str(os.environ.get('PROVIDER', 'world'))
-    return 'Let\'s test dev, qa workflow with another round. Hello '+provider+'!'
+    return 'Let\'s test teamcity + openshift. Hello '+provider+'!'
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
